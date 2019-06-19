@@ -28,6 +28,12 @@ fi
 # SSL mode
 if [ -z "${PGSSLMODE}" ]; then
 	PGSSLMODE=require
+# Encoding
+if [ -z "${DEFAULT_ENCODING}" ]; then
+	DEFAULT_ENCODING="UTF8"
+fi
+if [ -z "${DEFAULT_COLLATION}" ]; then
+	DEFAULT_COLLATION="en_US.UTF-8"
 fi
 # Enable hstore and topology by default
 if [ -z "${HSTORE}" ]; then
